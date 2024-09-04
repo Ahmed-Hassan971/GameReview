@@ -1,0 +1,89 @@
+:root {
+  --main-color: #272b30;
+  --second-color: #32383e;
+  --text-withe: #fff;
+  --blue-color: #09c;
+}
+.active {
+  color: var(--blue-color) !important;
+}
+body {
+  font-family: "Comfortaa", cursive;
+  min-height: 100%;
+  min-width: 100%;
+  background-color: var(--main-color);
+  color: var(--color-text);
+}
+/* Start Header */
+.header img {
+  max-height: 30vh;
+  object-fit: cover;
+}
+/* End Header */
+/* Start Navbar */
+nav {
+  background-color: rgb(58, 73, 123);
+  margin-top: -30px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 70%);
+}
+nav .container .navbar-brand h5 {
+  text-transform: uppercase;
+}
+nav .container .navbar-brand h5 .img-logo {
+  max-width: 45px;
+}
+nav .container .navbar-nav .nav-item {
+  font-size: 12px;
+}
+nav .container .navbar-nav .nav-item a {
+  color: var(--text-withe);
+  transition: all 0.3s;
+}
+nav .container .navbar-nav .nav-item a:hover {
+  color: var(--blue-color);
+}
+/* End Navbar */
+/* Start Game Date */
+.container .card {
+  transition: all 0.5s;
+  filter: grayscale(0.5);
+  cursor: pointer;
+}
+.container .card .card-body {
+  padding: 15px;
+}
+.container #game-date .card:hover {
+  transform: scale(1.045);
+  filter: grayscale(0);
+}
+e .container #game-dat .card .card-footer a {
+  background-color: var(--second-color);
+  padding: 5px;
+}
+/* End Game Date */
+.loading {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background-color: #272b30e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #fff;
+  border-right: 4px solid transparent;
+  animation: rotation 1s linear infinite;
+  position: relative;
+}
+
+@keyframes rotation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
